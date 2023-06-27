@@ -1,0 +1,57 @@
+body {
+    text-align: center;
+    background-image: url(drum/bag.png);
+    background-size: 100%;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #dbedf3;
+}
+
+.w {
+  background-image: url("drum/drum2.png");
+}
+
+.a {
+  background-image: url("drum/drum3.png");
+}
+
+.s {
+  background-image: url("drum/drum1.png");
+}
+
+.d {
+  background-image: url("drum/drum4.png");
+}
+
+.j {
+  background-image: url("drum/drum5.png");
+}
+
+.k {
+  background-image: url("drum/drum6.png");
+}
+
+.l {
+  background-image: url("drum/drum7.png");
+}
+.set {
+  margin: 10% auto;
+}
+
+
+.drum {
+  border: 10px solid #2b0808;
+  font-size: 5rem;
+  line-height: 2;
+  font-weight: 900;
+  color: #da0463;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center; 
+  margin: 10px;
+  background-color: white;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="title">The Drum 🥁 Kit</h1>
+    <div class="set" id="drumsParent">
+        <button class="w drum">w</button>
+        <button class="a drum">a</button>
+        <button class="s drum">s</button>
+        <button class="d drum">d</button>
+        <button class="j drum">j</button>
+        <button class="k drum">k</button>
+        <button class="l drum">l</button>
+    </div>
+
+
+
+    <script >
+        const drumsParent = document.getElementById("drumsParent");
+        drumsParent.addEventListener("click", (e) => {
+        let target = e.target.innerHTML;
+        createSound(target);
+        buttonAnimation(target);
+        });
+
+        drumsParent.addEventListener("keydown", (e) => {
+        let target = e.key;
+        let array = ["w", "a", "d", "j", "k", "l", "s"];
+        if (array.includes(target) === false) {
+            alert("Wrong Key Press");
+            return;
+        }
+        createSound(target);
+        buttonAnimation(target);
+        });
+
+        const createSound = (key) => {
+        let sound = new Audio(`music/sounds_${key}.mp3`);
+        sound.play();
+        };
+
+        const buttonAnimation = (key) => {
+        let active = document.querySelector(`.${key}`);
+        active.classList.add("pressed");
+
+        setTimeout(() => {
+            active.classList.remove("pressed");
+        }, 100);
+        };
+    </script>
+</body>
+
+</html>
